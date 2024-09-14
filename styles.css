@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+@media (max-width: 300px) {
+    #my-picture, .button-bar {
+        display: none;
+    }
+
+    .menu {
+        display: inline;
+    }
+}
+
+@media (max-height: 300px) {
+    #my-picture, .button-bar {
+        display: none;
+    }
+
+    .menu {
+        display: inline;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .right-content {
+        position: fixed;
+        z-index: -1;
+        opacity: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    width: 100%;
+    height: 4rem;
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: teal;
+}
+
+.logo {
+    font-size: 2rem;
+    font-family: 'Cabin';
+    font-weight: bold;
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.menu {
+    margin: 0 1rem;
+    display: none;
+}
+
+.menu:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.navbar-item {
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    font-size: 1.15rem;
+    font-family: 'Cabin';
+    font-weight: 600;
+}
+
+.navbar-item:hover {
+    color: rgb(212, 190, 255);
+}
+
+.body {
+    display: flex;
+    flex-grow: 1;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 2;
+    padding: 1rem;
+}
+
+.left-content h1 {
+    font-family: 'Cabin';
+    font-size: 4rem;
+    font-weight: bold;
+    color: teal;
+    padding: none;
+    margin: 0;
+}
+
+.left-content h3 {
+    font-family: 'Cabin';
+    font-size: 2rem;
+    font-weight: bold;
+    color: teal;
+    padding: none;
+    margin: 0;
+}
+
+.left-content h5 {
+    font-family: 'Cabin';
+    font-size: 1.15rem;
+    color: teal;
+    padding: none;
+    margin: 1.5rem 0;
+}
+
+button {
+    background: teal;
+    width: 16vh;
+    height: 6vh;
+    color: white;
+    font-family: 'Cabin';
+    font-size: 1rem;
+    border-radius: 3vh;
+    border: none;
+}
+
+button:hover {
+    font-weight: bold;
+    border: 2px solid rgb(4, 76, 76);
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 1rem;
+    flex-grow: 3;
+}
+
+#my-picture {
+    transform: scaleX(-1);
+    width: 100%;
+}
+
+#yay-text {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-family: 'Caveat';
+    font-size: 32px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 1px 1px black;
+}
